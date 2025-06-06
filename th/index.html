@@ -15,13 +15,35 @@
         .service {
             display: flex; 
             width: 100%; 
-            gap: 16px; 
+            gap: 32px; 
             .item { 
                 display: flex; 
                 flex-direction: column; 
                 h3 {
                     text-align-last: left;
-                    font-size: 32px !important;
+                    font-size: 28px !important;
+                    font-weight: 500 !important;
+                }
+                p {
+                    height: 100px;
+                }
+            }
+        }
+        .medical {
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+            gap: 32px;
+            img {
+                width: 50% !important;
+            }
+            .medical-data {
+                width: 50%;
+                h2,h3 {
+                    text-align-last: left;
+                }
+                button {
+                    margin-top: 16px;
                 }
             }
         }
@@ -36,11 +58,11 @@
     <!-- BANNER -->
     <div class="banner">
         <div class="slider-container" id="slider">
+            <img src="/assets/webp/Endoliftx-ยกกระชับด้วยเลเซอร์_converted.webp" alt="">
             <img src="/assets/webp/กายภาพบำบัด-เพื่อฟื้นฟูกล้ามเนื้อ_converted.webp" alt="">
             <img src="/assets/webp/ศูนย์สุขภาพและความงาม_converted.webp" alt="">
             <img src="/assets/webp/ศูนย์ฟิ้นฟูและชะลอวัย_converted.webp" alt="">
             <img src="/assets/webp/คลินิกดูแลผิวพรรณความงาม-โดยแพทย์เฉพาะทาง_converted.webp" alt="">
-            <img src="/assets/webp/Endoliftx-ยกกระชับด้วยเลเซอร์_converted.webp" alt="">
         </div>
         <button onclick="scrollAction(-1); isAutoScroll = false;">
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg>
@@ -133,34 +155,75 @@
     </style>
 
 
-
-
     <main>
-
         <!-- SERVICE -->
         <div class="container home">
-            <h2>บริการของเรา</h2>
-            <h3>เพื่อยกระดับสุขภาพที่ดีกว่าเดิม</h3>
+            <h3>บริการของเรา</h3>
+            <h2>เพื่อยกระดับสุขภาพที่ดีกว่าเดิม</h2>
             <div class="service">
                 <div class="item">
-                    <img src="/assets/webp/Aesthetics-Therapy_converted.webp" alt="">
-                    <h3>ความงาม</h3>
+                    <img src="/assets/webp/499634559_122128095266649938_2616318904583404856_n_converted.webp" alt="">
+                    <!-- <img src="/assets/webp/Aesthetics-Therapy_converted.webp" alt=""> -->
+                    <h3>ผิวพรรณและความงาม</h3>
                     <p>การปรับรูปหน้าแบบไม่ผ่าตัด ด้วยเทคโนโลยีใหม่ Endolifts, โบทูลินัม ท็อกซิน และฟิลเลอร์ เพื่อผิวหน้าที่อ่อนเยาว์ ดูเป็นธรรมชาติ</p>
-                    <button>ดูบริการเพิ่มเติม</button>
+                    <button>
+                        ดูบริการเพิ่มเติม
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#7a491a"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg>
+                    </button>
                 </div>
                 <div class="item">
-                    <img src="/assets/webp/Aesthetics-Therapy_converted.webp" alt="">
-                    <h3>ความงาม</h3>
+                    <img src="/assets/webp/Anti-aging-Longevity_converted.webp" alt="">
+                    <h3>เวชศาสตร์ชะลอวัย</h3>
                     <p>การปรับรูปหน้าแบบไม่ผ่าตัด ด้วยเทคโนโลยีใหม่ Endolifts, โบทูลินัม ท็อกซิน และฟิลเลอร์ เพื่อผิวหน้าที่อ่อนเยาว์ ดูเป็นธรรมชาติ</p>
-                    <button>ดูบริการเพิ่มเติม</button>
+                    <button>
+                        ดูบริการเพิ่มเติม
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#7a491a"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg>
+                    </button>
                 </div>
                 <div class="item">
-                    <img src="/assets/webp/Aesthetics-Therapy_converted.webp" alt="">
-                    <h3>ความงาม</h3>
+                    <img src="/assets/webp/Rehab-Physiotherapy_converted.webp" alt="">
+                    <h3>กายภาพบำบัดฟื้นฟูร่างกาย</h3>
                     <p>การปรับรูปหน้าแบบไม่ผ่าตัด ด้วยเทคโนโลยีใหม่ Endolifts, โบทูลินัม ท็อกซิน และฟิลเลอร์ เพื่อผิวหน้าที่อ่อนเยาว์ ดูเป็นธรรมชาติ</p>
-                    <button>ดูบริการเพิ่มเติม</button>
+                    <button>
+                        ดูบริการเพิ่มเติม
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#7a491a"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg>
+                    </button>
                 </div>
             </div>
+        </div>
+
+        <div class="container home">
+            <div class="medical">
+                <img src="/assets/webp/final-th-1536x1536_converted.webp" alt="">
+                <div class="medical-data">
+                    <h3>ทีมแพทย์ของเรา</h3>
+                    <h2>ทีมแพทย์ & เจ้าหน้าที่ผู้เชี่ยวชาญ</h2>
+                    <p>ที่ Zeniq Holistic เราภาคภูมิใจในทีมแพทย์ผู้เชี่ยวชาญที่มากประสบการณ์ในการรักษาที่ครบวงจร อีกทั้งยังมีระบบการดูแลที่เน้นผู้ป่วยเป็นศูนย์กลาง คอยให้คำปรึกษาและวางแผนการรักษาที่ตรงจุด ตอบโจทย์ความต้องการเฉพาะบุคคล เพื่อให้ผู้ป่วยได้รับการรักษาที่ดีที่สุดและมีสุขภาพที่แข็งแรงอย่างยั่งยืน</p>
+                    <button>
+                        ดูข้อมูลเพิ่มเติม
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#7a491a"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container home">
+            <h2>ชีวิตที่ยั่งยืน: เริ่มต้นด้วยสุขภาพที่ดี</h2>
+            <p>Zeniq Holistic เชื่อว่าการมีชีวิตที่ยืนยาวและมีคุณภาพนั้น เริ่มต้นจากการดูแลสุขภาพแบบองค์รวม ไม่ว่าจะเป็นร่างกาย จิตใจ หรืออารมณ์ เราจึงนำเสนอการรักษาที่ผสมผสานทั้งเทคโนโลยีและการรักษาแบบธรรมชาติ เพื่อช่วยให้คุณมีสุขภาพแข็งแรงและมีชีวิตชีวาอย่างยั่งยืน ไม่ว่าจะเป็นการปรับพฤติกรรมชีวิต การดูแลสุขภาพเชิงป้องกัน หรือการใช้นวัตกรรมทางการแพทย์ที่ทันสมัย</p>
+            <p>สุดท้ายเพราะเราเข้าใจว่าทุกคนมีความต้องการและเป้าหมายที่แตกต่างกัน เราจึงมุ่งมั่นที่จะสร้างแผนการดูแลสุขภาพที่เป็นส่วนตัวและตอบโจทย์ความต้องการของคุณทั้งในวันนี้และในปีต่อ ๆ ไป</p>
+        </div>
+
+        <div class="container home">
+            <h2>ความประทับใจของลูกค้า ที่บอกต่อประสบการณ์ดี ๆ</h2>
+            <div class="reviews">
+                <div class="review-item"></div>
+                <h4>รีวิวบน Google Business/Google Maps</h4>
+                <svg fill="#ffff00" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon" stroke="#ffff00"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"></path> </g></svg>
+                <svg fill="#ffff00" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon" stroke="#ffff00"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"></path> </g></svg>
+                <svg fill="#ffff00" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon" stroke="#ffff00"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"></path> </g></svg>
+                <svg fill="#ffff00" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon" stroke="#ffff00"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 ccccccccccccccccccccccccccc                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"></path> </g></svg>
+                <svg fill="#ffff00" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon" stroke="#ffff00"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"></path> </g></svg>
+                                                                                                                                                                                                                                                                                                                                 </div>
         </div>
     </main>
 </body>
