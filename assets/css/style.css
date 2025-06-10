@@ -53,14 +53,15 @@ main {
             h3 {
                 width: 100%;
                 text-align: center;
-                font-size: 18px;
+                font-size: 24px;
                 font-weight: 500;
                 color: #7a491a;
+                margin-bottom: 16px;
             }
             h2 {
                 width: 100%;
                 text-align: center;
-                font-size: 32px;
+                font-size: 18px;
                 font-weight: 500;
                 color: #7a491a;
             }
@@ -71,3 +72,30 @@ main {
         }   
     }
 }
+
+
+.popup {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: center;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        z-index: 999999;
+        img {
+            height: 90dvh;
+            box-shadow: 0 0 100vw 100vw #0004;
+        }
+        .close {
+            width: 24px;
+            height: 24px;
+            margin-right: -24px;
+            fill: #000;
+            cursor: pointer;
+        }
+        &.hidden {
+            display: none;
+        }
+    }

@@ -8,7 +8,13 @@
             .then(response => response.text())
             .then(data => {
                 document.getElementById('header-placeholder').innerHTML = data;
-            });   
+            });    
+        
+        fetch('/include/popup.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('popup-placeholder').innerHTML = data;
+            });  
     </script>
 
     <style>
@@ -24,19 +30,24 @@
             gap: 32px;
 
             .item {
+                width: 100%;
                 display: flex;
                 flex-direction: column;
-
                 h3 {
                     text-align-last: left;
                     font-size: 28px !important;
                     font-weight: 500 !important;
+                    margin: 0 !important;
                 }
 
                 p {
                     height: 100px;
                 }
+                img {
+                    width: 100%;
+                }
             }
+
         }
 
         .medical {
@@ -161,11 +172,12 @@
                         display: flex;
                         align-items: center;
                         gap: 4px;
-
                         img {
-                            width: 20px;
-                            height: 20px;
+                            width: 16px;
+                            height: 16px;
                             display: inline-block;
+                            background-color: #f5f5f5;
+                            box-shadow: 0 0 4px 1px #f5f5f5;
                         }
                     }
                 }
@@ -209,6 +221,15 @@
                 }
             }
         }
+        .partner {
+            display: grid;
+            align-items: center;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            gap: 32px;
+            img {
+                width: 100%;
+            }
+        }
     </style>
 
 </head>
@@ -216,6 +237,7 @@
 <body>
     <!-- Header -->
     <div id="header-placeholder"></div>
+    <div id="popup-placeholder"></div>
 
     <!-- BANNER -->
     <div class="banner">
@@ -253,7 +275,7 @@
             document.getElementById("slider-nav").innerHTML = '';
             for (let index = 0; index < document.getElementById("slider").children.length; index++) {
                 let dot = document.createElement('div');
-                if (index == scrollIndex) dot.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" height="px" viewBox="0 -960 960 960" width="20px" fill="#333"><path d="M480.19-252Q385-252 318.5-318.31T252-479.81q0-95.19 66.31-161.69t161.5-66.5q95.19 0 161.69 66.31t66.5 161.5q0 95.19-66.31 161.69T480.19-252Z"/></svg>`;
+                if (index == scrollIndex) dot.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="20px" fill="#333"><path d="M480.19-252Q385-252 318.5-318.31T252-479.81q0-95.19 66.31-161.69t161.5-66.5q95.19 0 161.69 66.31t66.5 161.5q0 95.19-66.31 161.69T480.19-252Z"/></svg>`;
                 else dot.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px" fill="#333"><path d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-155.5t86-127Q252-817 325-848.5T480-880q83 0 155.5 31.5t127 86q54.5 54.5 86 127T880-480q0 82-31.5 155t-86 127.5q-54.5 54.5-127 86T480-80Zm0-160q100 0 170-70t70-170q0-100-70-170t-170-70q-100 0-170 70t-70 170q0 100 70 170t170 70Z"/></svg>`
                 document.getElementById("slider-nav").appendChild(dot)
             }
@@ -268,11 +290,11 @@
     <main>
         <!-- SERVICE -->
         <div class="container home">
-            <h3>บริการของเรา</h3>
-            <h2>เพื่อยกระดับสุขภาพที่ดีกว่าเดิม</h2>
+            <h2>บริการของเรา</h2>
+            <h3>เพื่อยกระดับสุขภาพที่ดีกว่าเดิม</h3>
             <div class="service">
                 <div class="item">
-                    <img src="/assets/webp/499634559_122128095266649938_2616318904583404856_n_converted.webp" alt="">
+                    <img src="/assets/webp/Aesthetics-Therapy_converted.webp" alt="">
                     <!-- <img src="/assets/webp/Aesthetics-Therapy_converted.webp" alt=""> -->
                     <h3>ผิวพรรณและความงาม</h3>
                     <p>การปรับรูปหน้าแบบไม่ผ่าตัด ด้วยเทคโนโลยีใหม่ Endolifts, โบทูลินัม ท็อกซิน และฟิลเลอร์
@@ -288,8 +310,7 @@
                 <div class="item">
                     <img src="/assets/webp/Anti-aging-Longevity_converted.webp" alt="">
                     <h3>เวชศาสตร์ชะลอวัย</h3>
-                    <p>การปรับรูปหน้าแบบไม่ผ่าตัด ด้วยเทคโนโลยีใหม่ Endolifts, โบทูลินัม ท็อกซิน และฟิลเลอร์
-                        เพื่อผิวหน้าที่อ่อนเยาว์ ดูเป็นธรรมชาติ</p>
+                    <p>ดูแลสุขภาพแบบองค์รวม ด้วยการบำบัดเซลล์ อย่าง พร้อมคำแนะนำในการปรับเปลี่ยนพฤติกรรม เพื่อคุณภาพชีวิตที่ดีขึ้น</p>
                     <button>
                         ดูบริการเพิ่มเติม
                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
@@ -300,9 +321,8 @@
                 </div>
                 <div class="item">
                     <img src="/assets/webp/Rehab-Physiotherapy_converted.webp" alt="">
-                    <h3>กายภาพบำบัดฟื้นฟูร่างกาย</h3>
-                    <p>การปรับรูปหน้าแบบไม่ผ่าตัด ด้วยเทคโนโลยีใหม่ Endolifts, โบทูลินัม ท็อกซิน และฟิลเลอร์
-                        เพื่อผิวหน้าที่อ่อนเยาว์ ดูเป็นธรรมชาติ</p>
+                    <h3>กายภาพบำบัด</h3>
+                    <p>ฟื้นฟูร่างกายให้แข็งแรง ด้วยโปรแกรมเฉพาะบุคคล บำบัดอาการบาดเจ็บจากการเล่นกีฬา และการรักษาอาการปวดแบบองค์รวม</p>
                     <button>
                         ดูบริการเพิ่มเติม
                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
@@ -318,8 +338,8 @@
             <div class="medical">
                 <img src="/assets/webp/final-th-1536x1536_converted.webp" alt="">
                 <div class="medical-data">
-                    <h3>ทีมแพทย์ของเรา</h3>
-                    <h2>ทีมแพทย์ & เจ้าหน้าที่ผู้เชี่ยวชาญ</h2>
+                    <h2>ทีมแพทย์ของเรา</h2>
+                    <h3>ทีมแพทย์ Zeniq Holistic</h3>
                     <p>ที่ Zeniq Holistic เราภาคภูมิใจในทีมแพทย์ผู้เชี่ยวชาญที่มากประสบการณ์ในการรักษาที่ครบวงจร
                         อีกทั้งยังมีระบบการดูแลที่เน้นผู้ป่วยเป็นศูนย์กลาง คอยให้คำปรึกษาและวางแผนการรักษาที่ตรงจุด
                         ตอบโจทย์ความต้องการเฉพาะบุคคล
@@ -336,7 +356,8 @@
         </div>
 
         <div class="container home">
-            <h2>ชีวิตที่ยั่งยืน: เริ่มต้นด้วยสุขภาพที่ดี</h2>
+            <h2>Zeniq Aesthetic</h2>
+            <h3>ชีวิตที่ยั่งยืน: เริ่มต้นด้วยสุขภาพที่ดี</h3>
             <p>Zeniq Holistic เชื่อว่าการมีชีวิตที่ยืนยาวและมีคุณภาพนั้น เริ่มต้นจากการดูแลสุขภาพแบบองค์รวม
                 ไม่ว่าจะเป็นร่างกาย จิตใจ หรืออารมณ์ เราจึงนำเสนอการรักษาที่ผสมผสานทั้งเทคโนโลยีและการรักษาแบบธรรมชาติ
                 เพื่อช่วยให้คุณมีสุขภาพแข็งแรงและมีชีวิตชีวาอย่างยั่งยืน ไม่ว่าจะเป็นการปรับพฤติกรรมชีวิต
@@ -347,7 +368,8 @@
         </div>
 
         <div class="container home">
-            <h2>ความประทับใจของลูกค้า ที่บอกต่อประสบการณ์ดี ๆ</h2>
+            <h2>รีวิวจากลูกค้า</h2>
+            <h3>ความประทับใจของลูกค้า ที่บอกต่อประสบการณ์ดี ๆ</h3>
             <div id="reviews">
                 <div class="review-item">
                     <div class="user-data">
@@ -477,9 +499,13 @@
 
 
         <div class="container home">
-            <h3>บริการพิเศษจากเรา</h3>
-            <h2>เพื่อตอบสนอง ความต้องการเฉพาะคุณ จาก Zeniq Holistic</h2>
+            <h2>บริการพิเศษจากเรา</h2>
+            <h3>เพื่อตอบสนอง ความต้องการเฉพาะคุณ จาก Zeniq Holistic</h3>
             <div class="other-service">
+                <div class="service-item">
+                    <img style="padding: 12px 0;" src="/assets/webp/endoliftx.webp" alt="">
+                    <p>EndoliftX ยกกระชับไม่ต้องผ่าตัด</p>
+                </div>
                 <div class="service-item">
                     <img src="/assets/webp/coolscrupting.webp" alt="">
                     <p>ลายไขมันด้วยความเย็น</p>
@@ -489,27 +515,37 @@
                     <p>ดริปวิตามินเฉพาะบุคคล</p>
                 </div>
                 <div class="service-item">
-                    <img src="/assets/webp/coolscrupting.webp" alt="">
-                    <p>Endolift X</p>
+                    <img style="padding: 19px 0;" src="/assets/webp/cell.png" alt="">
+                    <p>บริการเซลล์บำบัด</p>
                 </div>
                 <div class="service-item">
-                    <img src="/assets/webp/coolscrupting.webp" alt="">
-                    <p>coolscrupting</p>
+                    <img style="padding: 22px 0;" src="/assets/webp/Sexual-Wellness.webp" alt="">
+                    <p>บริการเพื่อสุขภาพทางเพศ</p>
                 </div>
                 <div class="service-item">
-                    <img src="/assets/webp/coolscrupting.webp" alt="">
-                    <p>coolscrupting</p>
-                </div>
-                <div class="service-item">
-                    <img src="/assets/webp/coolscrupting.webp" alt="">
-                    <p>coolscrupting</p>
+                    <img style="padding: 20px 0;" src="/assets/webp/Spine.webp" alt="">
+                    <p>กายภาพบำบัด และกระดูกสันหลัง</p>
                 </div>
             </div>
         </div>
-
+        
+        <div class="container home">
+            <h2>พันธมิตรของเรา</h2>
+            <h3>ร่วมมือผู้เชี่ยวชาญ เพื่อสุขภาพและความงามยั่งยืน</h3>
+            <div class="partner">
+                <img src="/assets/webp/zbyzeniq-logo.webp" alt="">
+                <img src="/assets/webp/prolab-logo.webp" alt="">
+                <img src="/assets/webp/landmark-logo.webp" alt="">
+                <img src="/assets/webp/inspireivf-logo.webp" alt="">
+                <img src="/assets/webp/dusit-logo.webp" alt="">
+            </div>
+        </div>
         <div class="container">
         </div>
     </main>
+
+
+    
 </body>
 
 </html>
