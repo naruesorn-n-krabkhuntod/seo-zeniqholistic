@@ -84,15 +84,15 @@ main {
         left: 50%;
         translate: -50% -50%;
         z-index: 999999;
-        img {
-            height: 90dvh;
+        img:not(.close) {
+            height: 70dvh;
             box-shadow: 0 0 100vw 100vw #0004;
+            border: 1px solid #fff;
         }
         .close {
             width: 24px;
             height: 24px;
             margin-right: -24px;
-            fill: #000;
             cursor: pointer;
         }
         &.hidden {
