@@ -1,29 +1,10 @@
 <html>
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zeniq Holistic</title>
     <link rel="stylesheet" href="/assets/css/style.css">
-    <script>
-        fetch('/include/header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header-placeholder').innerHTML = data;
-            });    
-        
-        fetch('/include/popup.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('popup-placeholder').innerHTML = data;
-            });  
-
-        fetch('/include/footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer-placeholder').innerHTML = data;
-            });  
-    </script>
 
     <style>
         #header-placeholder {
@@ -41,6 +22,7 @@
                 width: 100%;
                 display: flex;
                 flex-direction: column;
+
                 h3 {
                     text-align-last: left;
                     font-size: 28px !important;
@@ -51,6 +33,7 @@
                 p {
                     height: 100px;
                 }
+
                 img {
                     width: 100%;
                 }
@@ -82,129 +65,11 @@
             }
         }
 
-        .banner {
-            position: relative;
-            width: 100%;
-            height: fit-content;
-
-            button {
-                background-color: #0006;
-                border: none;
-                position: absolute;
-                top: 50%;
-                left: 8px;
-                border-radius: 5px;
-                rotate: 180deg;
-                translate: 0 -50%;
-
-                svg {
-                    height: 64px;
-                    width: 40px;
-                    margin-left: 2px;
-                    fill: #fff;
-                }
-
-                &+button {
-                    right: 8px;
-                    left: unset;
-                    rotate: unset;
-                }
-            }
-
-            #slider-nav {
-                position: absolute;
-                bottom: 8px;
-                left: 50%;
-                translate: -50% 0;
-                display: flex;
-                align-items: center;
-                gap: 4px;
-                background-color: #fff3;
-                padding: 2px 4px;
-                border-radius: 16px;
-            }
-
-            .slider-container {
-                width: 100%;
-                display: flex;
-                align-items: center;
-                overflow-x: scroll;
-                scroll-snap-type: x mandatory;
-                scroll-behavior: smooth;
-                scrollbar-width: none;
-                -ms-overflow-style: none;
-
-                &::-webkit-scrollbar {
-                    display: none;
-                }
-
-                img {
-                    width: 100%;
-                    scroll-snap-align: center;
-                    flex-shrink: 0;
-                }
-            }
-        }
-
-        #reviews {
-            display: grid;
-            grid-template-columns: auto auto auto;
-            gap: 16px;
-
-            &+#reviews {
-                margin-top: 16px;
-            }
-
-            .review-item {
-                border: 1px solid #ccc;
-                border-radius: 8px;
-                box-shadow: 4px 4px 6px 2px #e5e5e5;
-                padding: 16px;
-                width: 100%;
-                flex-shrink: 0;
-                scroll-snap-align: start;
-
-                .user-data {
-                    display: flex;
-                    align-items: center;
-                    gap: 8px;
-                    margin-bottom: 8px;
-
-                    img {
-                        width: 45px;
-                        height: 45px;
-                        border-radius: 100%;
-                    }
-
-                    .star-box {
-                        display: flex;
-                        align-items: center;
-                        gap: 4px;
-                        img {
-                            width: 16px;
-                            height: 16px;
-                            display: inline-block;
-                            background-color: #f5f5f5;
-                            box-shadow: 0 0 4px 1px #f5f5f5;
-                        }
-                    }
-                }
-
-                p {
-                    height: 100%;
-                    text-overflow: ellipsis;
-                }
-                &:hover {
-                    scale: 1.02;
-                    transition: 0.3s;
-                }
-            }
-        }
-
         .other-service {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             gap: 8px;
+
             .service-item {
                 width: 100%;
                 display: flex;
@@ -214,42 +79,86 @@
                 align-items: center;
                 border-radius: 8px;
                 box-shadow: 2px 2px 4px 1px #e5e5e5;
+
                 &:hover {
                     scale: 1.01;
                     transition: 0.3s;
                     /* background-color: #e5e5e5; */
                 }
+
                 img {
                     width: auto;
                     height: 120px;
                 }
+
                 p {
                     font-size: 18px;
                     text-align: center;
                 }
             }
         }
+
         .partner {
             display: grid;
             align-items: center;
-            grid-template-columns: 1fr 1fr 1fr 1fr ;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
             gap: 128px;
             img {
                 width: 100%;
             }
         }
-        .video {
-            width: 100%;
+
+        .promotion {
             display: flex;
+            align-items: start;
+            flex-wrap: nowrap;
+            gap: 16px;
+
+            .promotion-item {
+                width: 100%;
+                box-shadow: 0 0 4px 1px #e5e5e5;
+                border: 1px solid #ccc;
+
+                &:hover {
+                    translate: 0 -8px;
+                }
+
+                
+            }
+        }
+
+        .vid {
+            display: flex;
+            flex-wrap: nowrap;
             align-items: center;
-            justify-content: center;
-            background-color: #39160b;
-            margin-top: 80px;
-            padding: 24px ;
+            gap: 24px;
+
             iframe {
-                width: 80%;
+                width: 50%;
                 aspect-ratio: 16/9;
                 height: auto;
+                box-shadow: 0 0 8px 1px #ccc;
+            }
+
+            div {
+                width: 50%;
+            }
+        }
+
+        .blog {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 8px;
+            .blog-item {
+                border: 1px solid #ccc;
+                background-color: #fff;
+            }
+            p {
+                margin-top: 8px;
+                padding: 0 8px;
+            }
+            h3 {
+                padding: 0 8px;
             }
         }
     </style>
@@ -258,66 +167,100 @@
 
 <body>
     <!-- Header -->
-    <div id="header-placeholder"></div>
-    <div id="popup-placeholder"></div>
+    <?php include('../include/header.php'); ?>
+
+    <!-- POPUP -->
+    <?php include('../include/popup.php'); ?>
 
     <!-- BANNER -->
-    <div class="banner">
-        <div class="slider-container" id="slider">
-            <img src="/assets/webp/Endoliftx-ยกกระชับด้วยเลเซอร์_converted.webp" alt="">
-            <img src="/assets/webp/กายภาพบำบัด-เพื่อฟื้นฟูกล้ามเนื้อ_converted.webp" alt="">
-            <img src="/assets/webp/ศูนย์สุขภาพและความงาม_converted.webp" alt="">
-            <img src="/assets/webp/ศูนย์ฟิ้นฟูและชะลอวัย_converted.webp" alt="">
-            <img src="/assets/webp/คลินิกดูแลผิวพรรณความงาม-โดยแพทย์เฉพาะทาง_converted.webp" alt="">
-        </div>
-        <button onclick="scrollAction(-1); isAutoScroll = false;">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff">
-                <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
-            </svg>
-        </button>
-        <button onclick="scrollAction(1); isAutoScroll = false;">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
-                fill="#f    ````````````````````````````````````````````````1   q9  1q2fffff">
-                <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
-            </svg>
-        </button>
-        <div id="slider-nav"></div>
-    </div>
-    <script>
-        let scrollIndex = 0;
-        let isAutoScroll = true;
-        function scrollAction(mode) {
-            scrollIndex += mode;
-            if (scrollIndex == document.getElementById("slider").children.length) scrollIndex = 0;
-            else if (scrollIndex < 0) scrollIndex = document.getElementById("slider").children.length - 1
-            document.getElementById("slider").scrollTo({ left: window.innerWidth * scrollIndex, behavior: "smooth" });
-            scrollNaviget()
-        }
-        function scrollNaviget() {
-            document.getElementById("slider-nav").innerHTML = '';
-            for (let index = 0; index < document.getElementById("slider").children.length; index++) {
-                let dot = document.createElement('div');
-                if (index == scrollIndex) dot.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="20px" fill="#333"><path d="M480.19-252Q385-252 318.5-318.31T252-479.81q0-95.19 66.31-161.69t161.5-66.5q95.19 0 161.69 66.31t66.5 161.5q0 95.19-66.31 161.69T480.19-252Z"/></svg>`;
-                else dot.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px" fill="#333"><path d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-155.5t86-127Q252-817 325-848.5T480-880q83 0 155.5 31.5t127 86q54.5 54.5 86 127T880-480q0 82-31.5 155t-86 127.5q-54.5 54.5-127 86T480-80Zm0-160q100 0 170-70t70-170q0-100-70-170t-170-70q-100 0-170 70t-70 170q0 100 70 170t170 70Z"/></svg>`
-                document.getElementById("slider-nav").appendChild(dot)
-            }
-        }
-        setInterval(() => {
-            if (isAutoScroll) scrollAction(1);
-        }, 3000);
-        scrollNaviget()
-    </script>
+    <?php include('../include/banner.php'); ?>
 
 
     <main>
-        <!-- SERVICE -->
         <div class="container home">
-            <h2>บริการของเรา</h2>
-            <h3>เพื่อยกระดับสุขภาพที่ดีกว่าเดิม</h3>
+            <!-- <h2>โปรโมชั่น</h2> -->
+            <h2>โปรโมชั่นพิเศษจาก Zeniq Holistic </h2>
+            <div class="promotion">
+                <div class="promotion-item">
+                    <img src="/assets/webp/promotion01.webp" alt="">
+                </div>
+                <div class="promotion-item">
+                    <img src="/assets/webp/promotion02.webp" alt="">
+                </div>
+                <div class="promotion-item">
+                    <img src="/assets/webp/promotion03.webp" alt="">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container home">
+            <div class="medical">
+                <img src="/assets/webp/final-th-1536x1536_converted.webp" alt="">
+                <div class="medical-data">
+
+
+                    <h2>ทีมแพทย์ Zeniq Holistic</h2>
+                    <p>ที่ Zeniq Holistic เราภาคภูมิใจในทีมแพทย์ผู้เชี่ยวชาญที่มากประสบการณ์ในการรักษาที่ครบวงจร
+                        อีกทั้งยังมีระบบการดูแลที่เน้นผู้ป่วยเป็นศูนย์กลาง คอยให้คำปรึกษาและวางแผนการรักษาที่ตรงจุด
+                        ตอบโจทย์ความต้องการเฉพาะบุคคล
+                        เพื่อให้ผู้ป่วยได้รับการรักษาที่ดีที่สุดและมีสุขภาพที่แข็งแรงอย่างยั่งยืน</p>
+                    <button>
+                        ดูข้อมูลเพิ่มเติม
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#7a491a">
+                            <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container home vid">
+            <div>
+                <h2>ชีวิตที่ยั่งยืน: เริ่มต้นด้วยสุขภาพที่ดี</h2>
+                <p>Zeniq Holistic เชื่อว่าการมีชีวิตที่ยืนยาวและมีคุณภาพนั้น เริ่มต้นจากการดูแลสุขภาพแบบองค์รวม
+                    ไม่ว่าจะเป็นร่างกาย จิตใจ หรืออารมณ์ เราจึงนำเสนอการรักษาที่ผสมผสานทั้งเทคโนโลยีและการรักษาแบบธรรมชาติ
+                    เพื่อช่วยให้คุณมีสุขภาพแข็งแรงและมีชีวิตชีวาอย่างยั่งยืน ไม่ว่าจะเป็นการปรับพฤติกรรมชีวิต
+                    การดูแลสุขภาพเชิงป้องกัน หรือการใช้นวัตกรรมทางการแพทย์ที่ทันสมัย</p>
+                <p>สุดท้ายเพราะเราเข้าใจว่าทุกคนมีความต้องการและเป้าหมายที่แตกต่างกัน
+                    เราจึงมุ่งมั่นที่จะสร้างแผนการดูแลสุขภาพที่เป็นส่วนตัวและตอบโจทย์ความต้องการของคุณทั้งในวันนี้และในปีต่อ
+                    ๆ ไป</p>
+            </div>
+            <iframe src="https://www.youtube.com/embed/4fbiMRB0GTE?si=S2rFXBI20Lt24Vs7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div class="fullwidth">
+            <div class="container home">
+                <h2>สาระความรู้ดีๆ ที่ Zeniq Holistic </h2>
+                <div class="blog">
+                    <div class="blog-item">
+                        <img src="/assets/webp/blog/Endolift-ยกกระชับผิวหน้า-1024x637.webp" alt="">
+                        <h3>EndoliftX คืออะไร? ยกหน้าให้ตึงกระชับ กู้ผิวหย่อนคล้อย ไม่ต้องผ่าตัด</h3>
+                        <p>อัพเดตเมื่อ อัพเดตเมื่อ 22 เมษายน 2025</p>
+                    </div>
+                    <div class="blog-item">
+                        <img src="/assets/webp/blog/ดริปผิวกับฉีดผิวต่างกันอย่างไร-1024x637.webp" alt="">
+                        <h3>EndoliftX คืออะไร? ยกหน้าให้ตึงกระชับ กู้ผิวหย่อนคล้อย ไม่ต้องผ่าตัด</h3>
+                        <p>อัพเดตเมื่อ อัพเดตเมื่อ 22 เมษายน 2025</p>
+                    </div>
+                    <div class="blog-item">
+                        <img src="/assets/webp/blog/สาเหตุ-หน้าแก่ก่อนวัย-เกิดจาก_1024x637.webp" alt="">
+                        <h3>EndoliftX คืออะไร? ยกหน้าให้ตึงกระชับ กู้ผิวหย่อนคล้อย ไม่ต้องผ่าตัด</h3>
+                        <p>อัพเดตเมื่อ อัพเดตเมื่อ 22 เมษายน 2025</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+
+        <!-- SERVICE -->
+        <!-- <div class="container home">
+            <h2>บริการจาก Zeniq Holistic</h2>
             <div class="service">
                 <div class="item">
                     <img src="/assets/webp/Aesthetics-Therapy_converted.webp" alt="">
-                    <!-- <img src="/assets/webp/Aesthetics-Therapy_converted.webp" alt=""> -->
                     <h3>ผิวพรรณและความงาม</h3>
                     <p>การปรับรูปหน้าแบบไม่ผ่าตัด ด้วยเทคโนโลยีใหม่ Endolifts, โบทูลินัม ท็อกซิน และฟิลเลอร์
                         เพื่อผิวหน้าที่อ่อนเยาว์ ดูเป็นธรรมชาติ</p>
@@ -354,174 +297,14 @@
                     </button>
                 </div>
             </div>
-        </div>
+        </div> -->
 
-        <div class="container home">
-            <div class="medical">
-                <img src="/assets/webp/final-th-1536x1536_converted.webp" alt="">
-                <div class="medical-data">
-                    <h2>ทีมแพทย์ของเรา</h2>
-                    <h3>ทีมแพทย์ Zeniq Holistic</h3>
-                    <p>ที่ Zeniq Holistic เราภาคภูมิใจในทีมแพทย์ผู้เชี่ยวชาญที่มากประสบการณ์ในการรักษาที่ครบวงจร
-                        อีกทั้งยังมีระบบการดูแลที่เน้นผู้ป่วยเป็นศูนย์กลาง คอยให้คำปรึกษาและวางแผนการรักษาที่ตรงจุด
-                        ตอบโจทย์ความต้องการเฉพาะบุคคล
-                        เพื่อให้ผู้ป่วยได้รับการรักษาที่ดีที่สุดและมีสุขภาพที่แข็งแรงอย่างยั่งยืน</p>
-                    <button>
-                        ดูข้อมูลเพิ่มเติม
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
-                            fill="#7a491a">
-                            <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <div class="container home">
-            <h2>Zeniq Aesthetic</h2>
-            <h3>ชีวิตที่ยั่งยืน: เริ่มต้นด้วยสุขภาพที่ดี</h3>
-            <p>Zeniq Holistic เชื่อว่าการมีชีวิตที่ยืนยาวและมีคุณภาพนั้น เริ่มต้นจากการดูแลสุขภาพแบบองค์รวม
-                ไม่ว่าจะเป็นร่างกาย จิตใจ หรืออารมณ์ เราจึงนำเสนอการรักษาที่ผสมผสานทั้งเทคโนโลยีและการรักษาแบบธรรมชาติ
-                เพื่อช่วยให้คุณมีสุขภาพแข็งแรงและมีชีวิตชีวาอย่างยั่งยืน ไม่ว่าจะเป็นการปรับพฤติกรรมชีวิต
-                การดูแลสุขภาพเชิงป้องกัน หรือการใช้นวัตกรรมทางการแพทย์ที่ทันสมัย</p>
-            <p>สุดท้ายเพราะเราเข้าใจว่าทุกคนมีความต้องการและเป้าหมายที่แตกต่างกัน
-                เราจึงมุ่งมั่นที่จะสร้างแผนการดูแลสุขภาพที่เป็นส่วนตัวและตอบโจทย์ความต้องการของคุณทั้งในวันนี้และในปีต่อ
-                ๆ ไป</p>
-        </div>
-
-        <div class="container home">
-            <h2>รีวิวจากลูกค้า</h2>
-            <h3>ความประทับใจของลูกค้า ที่บอกต่อประสบการณ์ดี ๆ</h3>
-            <div id="reviews">
-                <div class="review-item">
-                    <div class="user-data">
-                        <img src="/assets/webp/review1.webp" alt="">
-                        <div class="data">
-                            <h4>Witune Arayapipatkul</h4>
-                            <div class="star-box">
-                                <img src="/assets/svg/star.svg" alt="">
-                                <img src="/assets/svg/star.svg" alt="">
-                                <img src="/assets/svg/star.svg" alt="">
-                                <img src="/assets/svg/star.svg" alt="">
-                                <img src="/assets/svg/star.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <p>มาตรวจรักษา Office Syndrome หมอน่ารัก แก้ไขวันเดียวดีทันตาเห็นเลยครับ</p>
-                </div>
-
-
-                <div class="review-item">
-                    <div class="user-data">
-                        <img src="/assets/webp/review2.webp" alt="">
-                        <div class="data">
-                            <h4>dear Kanngon</h4>
-                            <div class="star-box">
-                                <img src="/assets/svg/star.svg" alt="">
-                                <img src="/assets/svg/star.svg" alt="">
-                                <img src="/assets/svg/star.svg" alt="">
-                                <img src="/assets/svg/star.svg" alt="">
-                                <img src="/assets/svg/star.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <p>เดินทางสะดวกมาก จากBTSนานา 5 นาที</p>
-                </div>
-
-
-                <div class="review-item">
-                    <div class="user-data">
-                        <img src="/assets/webp/review3.webp" alt="">
-                        <div class="data">
-                            <h4>Gigi</h4>
-                            <div class="star-box">
-                                <img src="/assets/svg/star.svg" alt="">
-                                <img src="/assets/svg/star.svg" alt="">
-                                <img src="/assets/svg/star.svg" alt="">
-                                <img src="/assets/svg/star.svg" alt="">
-                                <img src="/assets/svg/star.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <p>ฉันมีประสบการณ์ที่น่ารักกับการรักษาด้วยเลเซอร์
-                        พนักงานมีน้ำใจอย่างไม่น่าเชื่อและใส่ใจกับทุกสิ่งเล็กน้อย ฉันแนะนำสถานที่นี้ <span
-                            style="color: #00f;">แปลโดย Google Translate</span></p>
-                </div>
-            </div>
-            <div id="reviews">
-                <div class="review-item">
-                    <div class="user-data">
-                        <img src="/assets/webp/review4.webp" alt="">
-                        <div class="data">
-                            <h4>Chalisnam</h4>
-                            <div class="star-box">
-                                <img src="/assets/svg/star.svg" alt="">
-                                <img src="/assets/svg/star.svg" alt="">
-                                <img src="/assets/svg/star.svg" alt="">
-                                <img src="/assets/svg/star.svg" alt="">
-                                <img src="/assets/svg/star.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <p>ฉันไปคลินิกนี้ตอนเช้า คลินิกนี้พนักงานทุกคนใจดี!💖ฉันทำ Diode Laser and Treatment แนะนำจริงๆ
-                        สำหรับผู้ที่ต้องการสถานที่พักผ่อนที่สะดวกสบายและเงียบสงบ😊✨ <span style="color: #00f;">แปลโดย Google Translate</span></p>
-                </div>
-
-
-                <div class="review-item">
-                    <div class="user-data">
-                        <img src="/assets/webp/review5.webp" alt="">
-                        <div class="data">
-                            <h4>Nana Ruby</h4>
-                            <div class="star-box">
-                                <img src="/assets/svg/star.svg" alt="">
-                                <img src="/assets/svg/star.svg" alt="">
-                                <img src="/assets/svg/star.svg" alt="">
-                                <img src="/assets/svg/star.svg" alt="">
-                                <img src="/assets/svg/star.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <p>พนักงานที่นี่ใจดีและมีน้ำใจบริการดีทุกคนค่ะ 😍คลินิกนี้มีโปรแกรมมากมายแต่เราทำ iv laser และ Diode
-                        laser หากคุณกำลังมองหาสถานที่ดีๆ แนะนำคลินิกนี้เลย🫶🏻❤️<span style="color: #00f;">แปลโดย Google
-                            Translate</span></p>
-                </div>
-
-
-                <div class="review-item">
-                    <div class="user-data">
-                        <img src="/assets/webp/review6.webp" alt="">
-                        <div class="data">
-                            <h4>Mejii</h4>
-                            <div class="star-box">
-                                <img src="/assets/svg/star.svg" alt="">
-                                <img src="/assets/svg/star.svg" alt="">
-                                <img src="/assets/svg/star.svg" alt="">
-                                <img src="/assets/svg/star.svg" alt="">
-                                <img src="/assets/svg/star.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <p>เข้ามาทำโปรแกรม Filler คุณหมอให้คำแนะนำดีมาก ทำแล้วสวยและเลิศมาก ฉันแนะนำให้ทำ
-                        ราคากำลังดีและไม่แพง <span style="color: #00f;">แปลโดย Google Translate</span>
-                    </p>
-                </div>
-            </div>
-            <div style="display: flex;align-items: center;justify-content: end;width: 100%; margin-top: 16px;">
-                <button>
-                    <img src="/assets/webp/google.webp" style="width: 20px; height: 20px; margin-right: 8px;" alt="">
-                    ดูรีวิวเพิ่มเติม
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
-                        fill="#7a491a">
-                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
-                    </svg>
-                </button>
-            </div>
-        </div>
+        <!-- REVIEWS -->
+        <?php include('../include/reviews.php'); ?>
 
 
 
-        <div class="container home">
+        <!-- <div class="container home">
             <h2>บริการพิเศษจากเรา</h2>
             <h3>เพื่อตอบสนอง ความต้องการเฉพาะคุณ จาก Zeniq Holistic</h3>
             <div class="other-service">
@@ -550,11 +333,10 @@
                     <p>กายภาพบำบัด และกระดูกสันหลัง</p>
                 </div>
             </div>
-        </div>
-        
+        </div> -->
+
         <div class="container home">
-            <h2>พันธมิตรของเรา</h2>
-            <h3>ร่วมมือผู้เชี่ยวชาญ เพื่อสุขภาพและความงามยั่งยืน</h3>
+            <h2>พันธมิตรผู้เชี่ยวชาญ เพื่อสุขภาพและความงามที่ยั่งยืน</h2>
             <div class="partner">
                 <!-- <img src="/assets/webp/zbyzeniq-logo.webp" alt=""> -->
                 <img src="/assets/webp/prolab-logo.webp" alt="">
@@ -566,15 +348,8 @@
         <div class="container">
         </div>
 
-                
-        <div class="video">
-            <iframe src="https://www.youtube.com/embed/4fbiMRB0GTE?si=S2rFXBI20Lt24Vs7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
     </main>
-
-
-    
-    <div id="footer-placeholder"></div>
+    <?php include('../include/footer.php'); ?>
 </body>
 
 </html>
