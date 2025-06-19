@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>TEST</title>
+        <title>TEST server For SEO</title>
         <script>
             window.location.href = "/th"
         </script>
