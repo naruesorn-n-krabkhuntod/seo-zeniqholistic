@@ -46,7 +46,7 @@
     <div class="social-footer">
         <div class="social-item">
             <img src="/assets/webp/facebook_icon.webp" alt="">
-            <p>Zeniq Holistic</p>
+            <p>Zeniq Pain Center</p>
         </div>
         <div class="social-item line">
             <img src="/assets/webp/line_icon.webp" alt="">
@@ -54,11 +54,11 @@
         </div>
         <div class="social-item tiktok">
             <img src="/assets/webp/tiktok_icon.webp" alt="">
-            <p>Zeniq Holistic</p>
+            <p>Zeniq Pain Center</p>
         </div>
         <div class="social-item instragram">
             <img src="/assets/webp/instagram_icon.webp" alt="">
-            <p>Zeniq Holistic</p>
+            <p>Zeniq Pain Center</p>
         </div>
     </div>
 
@@ -166,7 +166,7 @@
         }
         .info {
             width: 100%;
-            background-color: #E3B869;
+            background-color: #0C1B5CEE;
             display: grid;
             grid-template-columns: 2fr 1fr;
             gap: 24px;
@@ -193,6 +193,15 @@
                         height: auto;
                     }
                 }
+            }
+        }
+    }
+
+    @media only screen and (max-width:800px){
+        footer {
+            .social-footer {
+                display: flex;
+                flex-direction: column;
             }
         }
     }

@@ -2,20 +2,25 @@
     <img src="/assets/webp/logo_crop.webp" alt="">
     <a href="/th">หน้าแรก</a>
     <div class="menu">
-        <a href="/th/aesthetic">ความงาม</a>
+        <a href="/th/service.php">บริการ</a>
         <img src="/assets/svg/icon-menu.svg" alt="">
         <div class="dropdown">
-            <a href="/th/aesthetic/test">ฉีดฟิลเลอร์</a>
-            <a href="/th/aesthetic/test">ฉีดโบท็อก</a>
-            <a href="/th/aesthetic/test">ฉีดกระตุ้นคอลลาเจน</a>
-            <a href="/th/aesthetic/test">ฉีดเมโสหน้าใส</a>
-            <a href="">รักษาผมร่วง</a>
-            <a href="">สกินบูสเตอร์</a>
-            <a href="">Coolsculpting</a>
-            <a href="">เลเซอร์ขน Diode Laser</a>
+            <a href="/th/aesthetic/test">กายภาพบำบัด</a>
+            <a href="/th/aesthetic/test">บำบัดร่างกายด้วยความเย็น</a>
+            <a href="/th/aesthetic/test">Shockwave</a>
+            <a href="/th/aesthetic/test">PMS</a>
+            <a href="">High power laser therapy</a>
+            <a href="">ออฟฟิศซินโดรม</a>
         </div>
     </div>
-    <div class="menu">
+
+
+    
+
+
+
+
+    <!-- <div class="menu">
         <a href="/th/aesthetic">ชะลอวัย</a>
         <img src="/assets/svg/icon-menu.svg" alt="">
         <div class="dropdown">
@@ -25,7 +30,7 @@
             <a href="/th/aesthetic/test">DFPP กรองเลือด</a>
             <a href="/th/aesthetic/test">IV laser therapy</a>
         </div>
-    </div>
+    </div> -->
     <!-- <div class="menu">
         <a href="/th/aesthetic">กายภาพบำบัด</a>
         <img src="/assets/svg/icon-menu.svg" alt="">
@@ -38,10 +43,10 @@
             <a href="/th/aesthetic/test">ออฟฟิศซินโดรม</a>
         </div>
     </div> -->
-    <a href="/th/news">ข่าวสารและกิจกรรม <div class="noti"></div></a>
-    <a href="/th/blog">สาระความรู้</a>
-    <a href="/th/faq">คำถามที่พบบ่อย</a>
-    <a href="/th/contact-us">ติดต่อเรา</a>
+    <a href="/th/news.php">ข่าวสารและกิจกรรม <div class="noti"></div></a>
+    <a href="/th/blog.php">สาระความรู้</a>
+    <a href="/th/faq.php">คำถามที่พบบ่อย</a>
+    <a href="/th/contact-us.php">ติดต่อเรา</a>
 </header>
 
 <style>
@@ -60,6 +65,7 @@
         background: rgba(255, 255, 255, 0.8); /* Semi-transparent */
         backdrop-filter: blur(16px);
         -webkit-backdrop-filter: blur(10px); /* For Safari */
+        font-size: 1.1rem;
         img {
             width: 54px;
             height: 56px;
@@ -85,6 +91,7 @@
                 overflow: hidden;
                 a {
                     padding: 12px;
+                    text-wrap: nowrap;
                     &:hover {
                         background-color: #0002;
                         transition: linear 0.2s;

@@ -1,11 +1,19 @@
 <div class="banner">
-    <div class="slider-container" id="slider">
+    <!-- <div class="slider-container" id="slider">
         <img src="/assets/webp/Endoliftx-ยกกระชับด้วยเลเซอร์_converted.webp" alt="">
         <img src="/assets/webp/กายภาพบำบัด-เพื่อฟื้นฟูกล้ามเนื้อ_converted.webp" alt="">
         <img src="/assets/webp/ศูนย์สุขภาพและความงาม_converted.webp" alt="">
         <img src="/assets/webp/ศูนย์ฟิ้นฟูและชะลอวัย_converted.webp" alt="">
         <img src="/assets/webp/คลินิกดูแลผิวพรรณความงาม-โดยแพทย์เฉพาะทาง_converted.webp" alt="">
+    </div> -->
+    <div class="slider-container" id="slider">
+        <img src="/assets/jpg/TEST BANNER.jpg" alt="">
+        <img src="/assets/jpg/TEST BANNER.jpg" alt="">
+        <img src="/assets/jpg/TEST BANNER.jpg" alt="">
+        <img src="/assets/jpg/TEST BANNER.jpg" alt="">
     </div>
+
+
     <button onclick="scrollAction(-1); isAutoScroll = false;">
         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff">
             <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />

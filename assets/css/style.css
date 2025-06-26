@@ -14,6 +14,14 @@
     }
 }
 
+h1 {
+    width: 100%;
+    padding: 32px 0;
+    background-color: #0C1B5C;
+    text-align: center;
+    color: #fff !important;
+}
+
 main {
     width: 100%;
     display: flex;

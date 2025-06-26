@@ -119,8 +119,13 @@
                 box-shadow: 0 0 4px 1px #e5e5e5;
                 border: 1px solid #ccc;
 
-                &:hover {
-                    translate: 0 -8px;
+                video {
+                    width: 100%;
+                }
+                iframe {
+                    width: 100%;
+                    height: auto;
+                    aspect-ratio: 9/16;
                 }
 
                 
@@ -131,17 +136,25 @@
             display: flex;
             flex-wrap: nowrap;
             align-items: center;
+            justify-content: space-between;
             gap: 24px;
 
-            iframe {
-                width: 50%;
-                aspect-ratio: 16/9;
-                height: auto;
-                box-shadow: 0 0 8px 1px #ccc;
-            }
-
             div {
-                width: 50%;
+                width: 70%;
+            }
+            video {
+                width: 30%;
+            }
+            iframe {
+                width: 30% !important;
+                aspect-ratio: 3/4 !important;
+                height: auto !important;
+            }
+            p {
+                color: #fff;
+            }
+            h2 {
+                color: #fff !important;
             }
         }
 
@@ -177,18 +190,46 @@
 
 
     <main>
+
+        <!-- SERVICE -->
         <div class="container home">
-            <!-- <h2>โปรโมชั่น</h2> -->
-            <h2>โปรโมชั่นพิเศษจาก Zeniq Holistic </h2>
-            <div class="promotion">
-                <div class="promotion-item">
-                    <img src="/assets/webp/promotion01.webp" alt="">
+            <h2>บริการจาก Zeniq Pain Center</h2>
+            <div class="service">
+                <div class="item">
+                    <img src="/assets/webp/4_converted.webp" alt="">
+                    <h3>RF Dicectomy</h3>
+                    <p>ใช้คลื่นความถี่วิทยุ (RF) เพื่อรักษาหรือบรรเทา แรงกดทับที่หมอนรองกระดูกสันหลัง ลดอาการปวด</p>
+                    <button>
+                        ดูบริการเพิ่มเติม
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#7a491a">
+                            <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                        </svg>
+                    </button>
                 </div>
-                <div class="promotion-item">
-                    <img src="/assets/webp/promotion02.webp" alt="">
+                <div class="item">
+                    <img src="/assets/webp/8_converted.webp" alt="">
+                    <h3>Epidural Steroid Injection</h3>
+                    <p>ฉีดยาสเตียรอยด์รอบๆกระดูกสันหลัง เพื่อบรรเทาอาการปวด จากการอักเสบในคอหรือหลัง โดยเฉพาะการกดทับของเส้นประสาท หรือ อาการหมอนรองกระดูกสันหลัง</p>
+                    <button>
+                        ดูบริการเพิ่มเติม
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#7a491a">
+                            <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                        </svg>
+                    </button>
                 </div>
-                <div class="promotion-item">
-                    <img src="/assets/webp/promotion03.webp" alt="">
+                <div class="item">
+                    <img src="/assets/webp/10_converted.webp" alt="">
+                    <h3>Caudal Epidural Ballon</h3>
+                    <p>การใช้บอลลูนขยายช่องเอพิดูรัล (พื้นที่ระหว่างกระดูกสันหลังและเยื่อหุ้มสมอง) เพื่อช่วยรักษาในสภาวะโพรงกระดูกสันหลังตีบ</p>
+                    <button>
+                        ดูบริการเพิ่มเติม
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#7a491a">
+                            <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
@@ -196,11 +237,9 @@
 
         <div class="container home">
             <div class="medical">
-                <img src="/assets/webp/final-th-1536x1536_converted.webp" alt="">
+                <img src="/assets/jpg/medical team.jpg" alt="">
                 <div class="medical-data">
-
-
-                    <h2>ทีมแพทย์ Zeniq Holistic</h2>
+                    <h2>ทีมแพทย์ Zeniq Pain Center</h2>
                     <p>ที่ Zeniq Holistic เราภาคภูมิใจในทีมแพทย์ผู้เชี่ยวชาญที่มากประสบการณ์ในการรักษาที่ครบวงจร
                         อีกทั้งยังมีระบบการดูแลที่เน้นผู้ป่วยเป็นศูนย์กลาง คอยให้คำปรึกษาและวางแผนการรักษาที่ตรงจุด
                         ตอบโจทย์ความต้องการเฉพาะบุคคล
@@ -216,121 +255,66 @@
             </div>
         </div>
 
-        <div class="container home vid">
-            <div>
-                <h2>ชีวิตที่ยั่งยืน: เริ่มต้นด้วยสุขภาพที่ดี</h2>
-                <p>Zeniq Holistic เชื่อว่าการมีชีวิตที่ยืนยาวและมีคุณภาพนั้น เริ่มต้นจากการดูแลสุขภาพแบบองค์รวม
-                    ไม่ว่าจะเป็นร่างกาย จิตใจ หรืออารมณ์ เราจึงนำเสนอการรักษาที่ผสมผสานทั้งเทคโนโลยีและการรักษาแบบธรรมชาติ
-                    เพื่อช่วยให้คุณมีสุขภาพแข็งแรงและมีชีวิตชีวาอย่างยั่งยืน ไม่ว่าจะเป็นการปรับพฤติกรรมชีวิต
-                    การดูแลสุขภาพเชิงป้องกัน หรือการใช้นวัตกรรมทางการแพทย์ที่ทันสมัย</p>
-                <p>สุดท้ายเพราะเราเข้าใจว่าทุกคนมีความต้องการและเป้าหมายที่แตกต่างกัน
-                    เราจึงมุ่งมั่นที่จะสร้างแผนการดูแลสุขภาพที่เป็นส่วนตัวและตอบโจทย์ความต้องการของคุณทั้งในวันนี้และในปีต่อ
-                    ๆ ไป</p>
-            </div>
-            <iframe src="https://www.youtube.com/embed/4fbiMRB0GTE?si=S2rFXBI20Lt24Vs7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-
-        <div class="fullwidth">
-            <div class="container home">
-                <h2>สาระความรู้ดีๆ ที่ Zeniq Holistic </h2>
-                <div class="blog">
-                    <div class="blog-item">
-                        <img src="/assets/webp/blog/Endolift-ยกกระชับผิวหน้า-1024x637.webp" alt="">
-                        <h3>EndoliftX คืออะไร? ยกหน้าให้ตึงกระชับ กู้ผิวหย่อนคล้อย ไม่ต้องผ่าตัด</h3>
-                        <p>อัพเดตเมื่อ อัพเดตเมื่อ 22 เมษายน 2025</p>
-                    </div>
-                    <div class="blog-item">
-                        <img src="/assets/webp/blog/ดริปผิวกับฉีดผิวต่างกันอย่างไร-1024x637.webp" alt="">
-                        <h3>EndoliftX คืออะไร? ยกหน้าให้ตึงกระชับ กู้ผิวหย่อนคล้อย ไม่ต้องผ่าตัด</h3>
-                        <p>อัพเดตเมื่อ อัพเดตเมื่อ 22 เมษายน 2025</p>
-                    </div>
-                    <div class="blog-item">
-                        <img src="/assets/webp/blog/สาเหตุ-หน้าแก่ก่อนวัย-เกิดจาก_1024x637.webp" alt="">
-                        <h3>EndoliftX คืออะไร? ยกหน้าให้ตึงกระชับ กู้ผิวหย่อนคล้อย ไม่ต้องผ่าตัด</h3>
-                        <p>อัพเดตเมื่อ อัพเดตเมื่อ 22 เมษายน 2025</p>
-                    </div>
+        <div class="fullwidth" style="background-color:#0C1B5CEE;">
+            <div class="container home vid">
+                <div>
+                    <h2>ชีวิตที่ยั่งยืน: เริ่มต้นด้วยสุขภาพที่ดี</h2>
+                    <p>Zeniq Holistic เชื่อว่าการมีชีวิตที่ยืนยาวและมีคุณภาพนั้น เริ่มต้นจากการดูแลสุขภาพแบบองค์รวม
+                        ไม่ว่าจะเป็นร่างกาย จิตใจ หรืออารมณ์ เราจึงนำเสนอการรักษาที่ผสมผสานทั้งเทคโนโลยีและการรักษาแบบธรรมชาติ
+                        เพื่อช่วยให้คุณมีสุขภาพแข็งแรงและมีชีวิตชีวาอย่างยั่งยืน ไม่ว่าจะเป็นการปรับพฤติกรรมชีวิต
+                        การดูแลสุขภาพเชิงป้องกัน หรือการใช้นวัตกรรมทางการแพทย์ที่ทันสมัย</p>
+                    <p>สุดท้ายเพราะเราเข้าใจว่าทุกคนมีความต้องการและเป้าหมายที่แตกต่างกัน
+                        เราจึงมุ่งมั่นที่จะสร้างแผนการดูแลสุขภาพที่เป็นส่วนตัวและตอบโจทย์ความต้องการของคุณทั้งในวันนี้และในปีต่อ
+                        ๆ ไป</p>
                 </div>
+                <!-- <video src="/assets/video/การปวดหลังเกิดได้หลายปัจจัย.mp4" controls autoplay muted></video> -->
+                <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2F61576842373479%2Fvideos%2F1696560804308917%2F&show_text=false&width=380&t=0" width="380" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+
             </div>
         </div>
         
 
+        <div class="container home">
+            <!-- <h2>โปรโมชั่น</h2> -->
+            <h2>คลิปวีดีโอ สาระความรู้ดีๆ จาก Zeniq Pain Center </h2>
+            <div class="promotion">
+                <div class="promotion-item">
+                    <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2F61576842373479%2Fvideos%2F24649541144647575%2F&show_text=false&width=267&t=0" width="267" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                </div>
 
-        <!-- SERVICE -->
-        <!-- <div class="container home">
-            <h2>บริการจาก Zeniq Holistic</h2>
-            <div class="service">
-                <div class="item">
-                    <img src="/assets/webp/Aesthetics-Therapy_converted.webp" alt="">
-                    <h3>ผิวพรรณและความงาม</h3>
-                    <p>การปรับรูปหน้าแบบไม่ผ่าตัด ด้วยเทคโนโลยีใหม่ Endolifts, โบทูลินัม ท็อกซิน และฟิลเลอร์
-                        เพื่อผิวหน้าที่อ่อนเยาว์ ดูเป็นธรรมชาติ</p>
-                    <button>
-                        ดูบริการเพิ่มเติม
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
-                            fill="#7a491a">
-                            <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
-                        </svg>
-                    </button>
+                <div class="promotion-item">
+                    <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2F61576842373479%2Fvideos%2F724920716692099%2F&show_text=false&width=267&t=0" width="267" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
                 </div>
-                <div class="item">
-                    <img src="/assets/webp/Anti-aging-Longevity_converted.webp" alt="">
-                    <h3>เวชศาสตร์ชะลอวัย</h3>
-                    <p>ดูแลสุขภาพแบบองค์รวม ด้วยการบำบัดเซลล์ อย่าง พร้อมคำแนะนำในการปรับเปลี่ยนพฤติกรรม เพื่อคุณภาพชีวิตที่ดีขึ้น</p>
-                    <button>
-                        ดูบริการเพิ่มเติม
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
-                            fill="#7a491a">
-                            <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
-                        </svg>
-                    </button>
-                </div>
-                <div class="item">
-                    <img src="/assets/webp/Rehab-Physiotherapy_converted.webp" alt="">
-                    <h3>กายภาพบำบัด</h3>
-                    <p>ฟื้นฟูร่างกายให้แข็งแรง ด้วยโปรแกรมเฉพาะบุคคล บำบัดอาการบาดเจ็บจากการเล่นกีฬา และการรักษาอาการปวดแบบองค์รวม</p>
-                    <button>
-                        ดูบริการเพิ่มเติม
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
-                            fill="#7a491a">
-                            <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
-                        </svg>
-                    </button>
+                <div class="promotion-item">
+                    <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2F61576842373479%2Fvideos%2F983596043670636%2F&show_text=false&width=267&t=0" width="267" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
                 </div>
             </div>
-        </div> -->
+        </div>
+
+
+        
 
         <!-- REVIEWS -->
         <?php include('../include/reviews.php'); ?>
 
 
-
         <!-- <div class="container home">
-            <h2>บริการพิเศษจากเรา</h2>
-            <h3>เพื่อตอบสนอง ความต้องการเฉพาะคุณ จาก Zeniq Holistic</h3>
-            <div class="other-service">
-                <div class="service-item">
-                    <img style="padding: 12px 0;" src="/assets/webp/endoliftx.webp" alt="">
-                    <p>EndoliftX ยกกระชับไม่ต้องผ่าตัด</p>
+            <h2>สาระความรู้ดีๆ ที่ Zeniq Holistic </h2>
+            <div class="blog">
+                <div class="blog-item">
+                    <img src="/assets/webp/blog/Endolift-ยกกระชับผิวหน้า-1024x637.webp" alt="">
+                    <h3>EndoliftX คืออะไร? ยกหน้าให้ตึงกระชับ กู้ผิวหย่อนคล้อย ไม่ต้องผ่าตัด</h3>
+                    <p>อัพเดตเมื่อ อัพเดตเมื่อ 22 เมษายน 2025</p>
                 </div>
-                <div class="service-item">
-                    <img src="/assets/webp/coolscrupting.webp" alt="">
-                    <p>ลายไขมันด้วยความเย็น</p>
+                <div class="blog-item">
+                    <img src="/assets/webp/blog/ดริปผิวกับฉีดผิวต่างกันอย่างไร-1024x637.webp" alt="">
+                    <h3>EndoliftX คืออะไร? ยกหน้าให้ตึงกระชับ กู้ผิวหย่อนคล้อย ไม่ต้องผ่าตัด</h3>
+                    <p>อัพเดตเมื่อ อัพเดตเมื่อ 22 เมษายน 2025</p>
                 </div>
-                <div class="service-item">
-                    <img style="padding: 20px 0;" src="/assets/webp/IVDrip.webp" alt="">
-                    <p>ดริปวิตามินเฉพาะบุคคล</p>
-                </div>
-                <div class="service-item">
-                    <img style="padding: 19px 0;" src="/assets/webp/cell.png" alt="">
-                    <p>บริการเซลล์บำบัด</p>
-                </div>
-                <div class="service-item">
-                    <img style="padding: 22px 0;" src="/assets/webp/Sexual-Wellness.webp" alt="">
-                    <p>บริการเพื่อสุขภาพทางเพศ</p>
-                </div>
-                <div class="service-item">
-                    <img style="padding: 20px 0;" src="/assets/webp/Spine.webp" alt="">
-                    <p>กายภาพบำบัด และกระดูกสันหลัง</p>
+                <div class="blog-item">
+                    <img src="/assets/webp/blog/สาเหตุ-หน้าแก่ก่อนวัย-เกิดจาก_1024x637.webp" alt="">
+                    <h3>EndoliftX คืออะไร? ยกหน้าให้ตึงกระชับ กู้ผิวหย่อนคล้อย ไม่ต้องผ่าตัด</h3>
+                    <p>อัพเดตเมื่อ อัพเดตเมื่อ 22 เมษายน 2025</p>
                 </div>
             </div>
         </div> -->

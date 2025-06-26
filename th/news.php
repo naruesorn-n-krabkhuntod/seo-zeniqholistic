@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeniq Holistic</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <style>
+        #header-placeholder {
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+        .blog {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 8px;
+            .blog-item {
+                border: 1px solid #ccc;
+                background-color: #fff;
+            }
+            p {
+                margin-top: 8px;
+                padding: 0 8px;
+            }
+            h3 {
+                padding: 0 8px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Header -->
+    <?php include('../include/header.php'); ?>
+
+    <h1>ข่าวสารและกิจกรรม</h1>
+    <main>
+        <div class="container home">
+            <div class="blog">
+                <div class="blog-item">
+                    <img src="/assets/webp/blog/Endolift-ยกกระชับผิวหน้า-1024x637.webp" alt="">
+                    <h3>EndoliftX คืออะไร? ยกหน้าให้ตึงกระชับ กู้ผิวหย่อนคล้อย ไม่ต้องผ่าตัด</h3>
+                    <p>อัพเดตเมื่อ อัพเดตเมื่อ 22 เมษายน 2025</p>
+                </div>
+                <div class="blog-item">
+                    <img src="/assets/webp/blog/ดริปผิวกับฉีดผิวต่างกันอย่างไร-1024x637.webp" alt="">
+                    <h3>EndoliftX คืออะไร? ยกหน้าให้ตึงกระชับ กู้ผิวหย่อนคล้อย ไม่ต้องผ่าตัด</h3>
+                    <p>อัพเดตเมื่อ อัพเดตเมื่อ 22 เมษายน 2025</p>
+                </div>
+                <div class="blog-item">
+                    <img src="/assets/webp/blog/สาเหตุ-หน้าแก่ก่อนวัย-เกิดจาก_1024x637.webp" alt="">
+                    <h3>EndoliftX คืออะไร? ยกหน้าให้ตึงกระชับ กู้ผิวหย่อนคล้อย ไม่ต้องผ่าตัด</h3>
+                    <p>อัพเดตเมื่อ อัพเดตเมื่อ 22 เมษายน 2025</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container"></div>
+    </main>
+    <?php include('../include/footer.php'); ?>
+</body>
+
+</html>
